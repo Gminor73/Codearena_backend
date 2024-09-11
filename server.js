@@ -3,7 +3,7 @@ const express = require('express')
 const cors = require('cors')
 const app = express()
 const port = process.env.PORT
-const homeRoute = require('./routes/home');
+const accessRoute = require('./routes/access');
 const loginRoute = require('./routes/login');
 const registerRoute = require('./routes/register');
 const problemsRoute = require('./routes/problems');
@@ -27,7 +27,7 @@ global.db = db;
 app.use(cors());
 app.use(express.json());
 
-app.use('/access', homeRoute)
+app.use('/access', accessRoute)
 app.use('/problems', problemsRoute)
 app.use('/blogs', blogsRoute)
 app.use('/login', loginRoute);
