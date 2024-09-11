@@ -37,8 +37,9 @@ app.use('/createproblem', createProblemRoute);
 app.use('/createblog', createBlogRoute);
 app.use('/testing', testprobRoute);
 
-app.listen(port, '0.0.0.0',() => {
-  console.log(`listening on port ${port}`)
-})
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
 
 module.exports = app;
