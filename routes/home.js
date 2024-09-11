@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-router.post('/access', async (req, res) => {
+router.post('/', async (req, res) => {
     const user = await req.body.username;
     const ADMIN = await db.collection('admins').find({}).toArray();
     const foundAdmin = await ADMIN.find(x => x.email === user);
