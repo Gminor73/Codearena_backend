@@ -27,7 +27,7 @@ global.db = db;
 app.use(cors());
 app.use(express.json());
 
-app.use('/access', accessRoute)
+app.use('/access', accessRoute) 
 app.use('/problems', problemsRoute)
 app.use('/blogs', blogsRoute)
 app.use('/login', loginRoute);
